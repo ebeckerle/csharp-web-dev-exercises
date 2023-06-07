@@ -31,13 +31,37 @@ namespace Classes_Part_2
         public void AddGrade(int courseCredits, double grade)
         {
             // Update the appropriate properties: NumberOfCredits, Gpa
+            this.NumberOfCredits += courseCredits;
+
         }
 
         //TODO: Complete the GetGradeLevel method here:
         public string GetGradeLevel(int credits)
         {
+            string gradeLevel = "";
             // Determine the grade level of the student based on NumberOfCredits
-            return "grade level tbd";
+            if (29 > credits > 0)
+            {
+                gradeLevel = "Freshman";
+            }
+            else if (59 > credits > 30)
+            {
+                gradeLevel = "Sophmore";
+            }
+            else if (89 > credits > 60)
+            {
+                gradeLevel = "Jumior";
+            }
+            else if (credits > 90)
+            {
+                gradeLevel = "Senior";
+            }
+            else 
+            {
+                gradeLevel = "TBD"
+            }
+
+            return gradeLevel;
         }
 
         // TODO: Add your custom 'ToString' method here. Make sure it returns a well-formatted string rather
