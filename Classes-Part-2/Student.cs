@@ -32,6 +32,10 @@ namespace Classes_Part_2
         {
             // Update the appropriate properties: NumberOfCredits, Gpa
             this.NumberOfCredits += courseCredits;
+            string thisCourseGpa = grade / courseCredits;
+            string totalQualityScore = this.Gpa * this.NumberOfCredits;
+            totalQualityScore += courseCredits * grade;
+            this.Gpa = totalQualityScore / NumberOfCredits;
 
         }
 
